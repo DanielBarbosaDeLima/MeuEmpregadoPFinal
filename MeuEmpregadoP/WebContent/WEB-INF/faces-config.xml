@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+	<navigation-rule>
+		<from-view-id>/MsgEMPREGADOR.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listamensagemEMPREGADOR</from-outcome>
+			<to-view-id>/listamensagemEMPREGADOR.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listaPacoteSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>alterarPacoteSeguro</from-outcome>
+			<to-view-id>/alterarPacoteSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/MeusEmpregados.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>contratoPacoteSeguro</from-outcome>
+			<to-view-id>/contratoPacoteSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/contratoPacoteSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>MeusEmpregados</from-outcome>
+			<to-view-id>/MeusEmpregados.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/alterarPacoteSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listaPacoteSeguro</from-outcome>
+			<to-view-id>/listaPacoteSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/contrato.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>contratoPacoteSeguro</from-outcome>
+			<to-view-id>/contratoPacoteSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/novaMensagemEMPREGADO.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>contratoPacoteSeguro</from-outcome>
+			<to-view-id>/contratoPacoteSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/contratoPacoteSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>novaMensagemEMPREGADO</from-outcome>
+			<to-view-id>/novaMensagemEMPREGADO.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/contratoPacoteSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listaContratoSeguro</from-outcome>
+			<to-view-id>/listaContratoSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/listaContratoSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listaPacoteSeguro</from-outcome>
+			<to-view-id>/listaPacoteSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/listaContratoSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>RestringirContratoSeguro</from-outcome>
+			<to-view-id>/RestringirContratoSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/RestringirContratoSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listaContratoSeguro</from-outcome>
+			<to-view-id>/listaContratoSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/listaPacoteSeguro.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listaContratoSeguro</from-outcome>
+			<to-view-id>/listaContratoSeguro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>indexEMPREGADOR.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>showEMPREGADO</from-outcome>
+			<to-view-id>showEMPREGADO.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>indexEMPREGADOR.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>novaMensagemEMPREGADO</from-outcome>
+			<to-view-id>novaMensagemEMPREGADO.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>showEMPREGADO.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>indexEMPREGADOR</from-outcome>
+			<to-view-id>indexEMPREGADOR.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>novaMensagemEMPREGADO.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>indexEMPREGADOR</from-outcome>
+			<to-view-id>indexEMPREGADOR.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>showMsgEMPREGADO.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>Inicial</from-outcome>
+			<to-view-id>Inicial.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>MsgEMPREGADOR.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>Inicial</from-outcome>
+			<to-view-id>Inicial.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>showEMPREGADO.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>novaMensagemEMPREGADO</from-outcome>
+			<to-view-id>novaMensagemEMPREGADO.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>MeusEmpregados.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>telaDemissao</from-outcome>
+			<to-view-id>telaDemissao.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>telaDemissao.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listamensagemEMPREGADOR</from-outcome>
+			<to-view-id>listamensagemEMPREGADOR.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>MsgEMPREGADOR.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>listamensagemEMPREGADOR</from-outcome>
+			<to-view-id>listamensagemEMPREGADOR.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

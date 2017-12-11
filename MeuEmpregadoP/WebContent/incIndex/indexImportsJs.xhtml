@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+	<ui:composition>
+
+		<!-- jQuery -->
+		<h:outputScript name="util/jquery/dist/jquery.min.js" />
+		<h:outputScript name="js/jquery.jcarousel.min.js" />
+		<!-- Bootstrap -->
+		<h:outputScript name="util/bootstrap1/js/bootstrap.min.js" />
+		<h:outputScript name="util/prettyPhoto/js/jquery.prettyPhoto.js" />
+		<h:outputScript name="js/menusm.js" />
+		<h:outputScript name="js/scripts.js" />
+		<h:outputScript name="util/ui_totop/js/jquery.ui.totop.js" />
+		<h:outputScript name="util/preloader/js/jquery.preloader.js" />
+		<h:outputScript name="util/twitter_tweet/jquery.tweet.js" />
+		<h:outputScript name="js/tinynav.min.js" />
+		<h:outputScript>
+			<script type="text/javascript">
+				$(function() {
+					$('#nav').tinyNav({
+						active : 'selected',
+						header : 'Navigation'
+					});
+				});
+			</script>
+		</h:outputScript>
+
+
+			
+			
+
+	</ui:composition>
+</h:body>
+</html>

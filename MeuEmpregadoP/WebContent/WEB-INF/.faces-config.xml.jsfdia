@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#suaTela.xhtml" PATH="/suaTela.xhtml"
+  SHAPE="70,77,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#suaTela.xhtml:0" NAME="item"
+   PATH="/suaTela.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="painelAdministrativo::#painelAdministrativo.xhtml" NAME="output"
+    PATH="/painelAdministrativo.xhtml"
+    TARGET="rules:#painelAdministrativo.xhtml"
+    TITLE="painelAdministrativo" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#painelAdministrativo.xhtml"
+  PATH="/painelAdministrativo.xhtml" SHAPE="296,136,50,25"
+  model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="137,196,0,0" model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

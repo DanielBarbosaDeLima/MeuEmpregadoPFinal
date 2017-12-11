@@ -1,0 +1,90 @@
+<!-- MENU ESQUERDO PAINEL DE CONTROLE -->
+<div class="col-md-3 left_col menu_fixed" xmlns:p="http://primefaces.org/ui" xmlns:c="http://xmlns.jcp.org/jsp/jstl/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+	<f:metadata> 
+		<f:event type="preRenderView" listener="#{loginManagedBean.addEmpregado}"/> 
+	</f:metadata>
+	<div class="left_col scroll-view">
+		<div class="navbar nav_title" style="border: 0;">
+			<a href="painelAdministrativo.xhtml" class="site_title">
+				<i class="fa fa-ravelry" aria-hidden="true"></i> <span>MeuEmpregado</span>
+			</a>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<!-- MENU PERFIL -->
+		<div class="profile clearfix">
+			<div class="profile_pic">
+				<p:graphicImage name="images/user.png" class="img-circle profile_img" />		
+			</div>
+			<div class="profile_info">
+				<span>Bem vindo,</span>
+				<h2>
+					<h:outputText value="#{loginManagedBean.empregado.nomeCompleto}" rendered="#{loginManagedBean.tipoUsuario=='EMPREGADO'}"/>
+					<h:outputText value="#{loginManagedBean.empregador.nome}" rendered="#{loginManagedBean.tipoUsuario=='EMPREGADOR'}"/>
+				</h2>
+			</div>
+		</div>
+		<!-- /MENU PERFIL -->
+
+		<br />
+
+		<!-- MENU PRINCIPAL -->
+		<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+			<div id="menu" class="menu_section">
+				<h3>PRINCIPAL</h3>
+				<ul class="nav side-menu">
+					<li><a><i class="fa fa-home"></i> Administrador <span
+							class="fa fa-chevron-down"></span></a>
+						<ul class="nav child_menu">
+							
+						</ul></li>
+					<c:if test="#{loginManagedBean.tipoUsuario eq 'EMPREGADOR'}">
+						<li><a><i class="fa fa-edit"></i> Empregador <span
+								class="fa fa-chevron-down"></span></a>
+							<ul class="nav child_menu">
+								<li><a href="indexEMPREGADOR.xhtml">Buscar Empregado</a></li>
+								<li><a href="listamensagemEMPREGADOR.xhtml">Lista de Mensagem</a></li>
+								<li><a href="MeusEmpregados.xhtml">Meus Empregados</a></li>
+							</ul></li>
+					</c:if>
+					<c:if test="#{loginManagedBean.tipoUsuario eq 'EMPREGADO'}">
+						<li rendered="#{loginManagedBean.tipoUsuario=='EMPREGADO'}"><a><i class="fa fa-address-book-o" aria-hidden="true"></i> Empregado <span
+								class="fa fa-chevron-down"></span></a>
+							<ul class="nav child_menu">
+								<li><a href="listamensagemEMPREGADO.xhtml">Lista de Propostas Recebidas</a></li>
+							</ul>
+						</li>
+					</c:if>
+					<li><a><i class="fa fa-calendar" aria-hidden="true"></i> Recrutamento <span
+							class="fa fa-chevron-down"></span></a>
+						<ul class="nav child_menu">
+							
+						</ul></li>
+					<li><a><i class="fa fa-users" aria-hidden="true"></i> Seguradora <span
+							class="fa fa-chevron-down"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="listaContratoSeguro.xhtml">Lista de Contratos de Seguro de Vida</a></li>
+							<li><a href="listaPacoteSeguro.xhtml">Lista de Planos de Seguro</a></li>
+						</ul></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- /MENU PRINCIPAL -->
+
+		<!-- /MENU FOOTER -->
+		<div class="sidebar-footer hidden-small">
+			<a data-toggle="tooltip" data-placement="top" title="Configurações">
+				<span class="fa fa-cog" aria-hidden="true"></span>
+			</a> <a data-toggle="tooltip" data-placement="top" title="Tela Cheia">
+				<span class="fa fa-arrows-alt" aria-hidden="true"></span>
+			</a> <a data-toggle="tooltip" data-placement="top" title="Bloquear">
+				<span class="fa fa-lock" aria-hidden="true"></span>
+			</a> <a data-toggle="tooltip" data-placement="top" title="Sair" href="#">
+				<span class="fa fa-power-off" aria-hidden="true"></span>
+			</a>
+		</div>
+		<!-- /MENU FOOTER -->
+	</div>
+</div>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<!--  IMPORTANDO HEAD -->
+	<ui:include src="incPainel/painelHead.xhtml" />
+</h:head>
+<h:body class="nav-md">
+
+	<div class="container body">
+
+		<div class="main_container">
+
+			<!--  IMPORTANDO MENU PRINCIPAL -->
+			<ui:include src="incPainel/painelMenu.xhtml" />
+
+			<!-- IMPORTANDO MENU TOPO -->
+			<ui:include src="incPainel/painelMenuTopo.xhtml" />
+			<!-- PAGINA PRINCIPAL -->
+
+			<div class="right_col" role="main">
+				<div class="">
+
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="x_panel">
+								<div class="x_title">
+									<img style="float: left" src="resources/images/bradesco.png" alt=""/>
+									<h2>&nbsp; Contrato de Seguro de Vida</h2>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i
+												class="fa fa-chevron-up"></i></a></li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle"
+											data-toggle="dropdown" role="button" aria-expanded="false"><i
+												class="fa fa-wrench"></i></a>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="#">Configuração</a></li>
+											</ul></li>
+										<li><a class="close-link"><i class="fa fa-close"></i></a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+									<br />
+									<!-- INSIRA SEU <form> -->
+									<h1 style="text-align: center">Planos de Seguro de Vida</h1>
+									<br />
+									<h:form>
+										<!-- Plano 1 -->
+										<div class="col-md-4 col-sm-6 col-xs-12">
+											<div class="pricing">
+												<div class="title">
+													<h1>
+														<h:outputText
+															value="#{pacoteSeguroManagedBean.primeiropacote.nome}" />
+													</h1>
+													<h2>
+														<h:outputText
+															value="#{pacoteSeguroManagedBean.primeiropacote.cobertura}" />
+													</h2>
+												</div>
+												<div class="x_content">
+													<div class="">
+														<div class="pricing_features">
+															<ul class="list-unstyled text-left">
+																<li>
+																	<p style="text-align: center">
+																		<h:outputText
+																			value="#{pacoteSeguroManagedBean.primeiropacote.descricao}" />
+																	</p>
+																</li>
+																<li>
+																	<p>
+																		<strong><h:outputText
+																				value="Indenização: #{pacoteSeguroManagedBean.primeiropacote.IndenizaçãoReal()}" /></strong>
+																	</p>
+																</li>
+																<li><h:outputText
+																		value="Valor Mensal: #{pacoteSeguroManagedBean.primeiropacote.ValorMensalReal()}" />
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="pricing_footer">
+														<h:commandButton styleClass="btn btn-success btn-block"
+															value="Contratar"
+															action="#{contratoSeguroManagedBean.addPacote1}" >
+															<f:setPropertyActionListener
+															target="#{mensagemManagedBean.mensagem.idContratoSeguro}" value="1" />
+														</h:commandButton>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Plano 2 -->
+										<div class="col-md-4 col-sm-6 col-xs-12">
+											<div class="pricing">
+												<div class="title" style="background-color: #0773a0">
+													<h1>
+														<h:outputText
+															value="#{pacoteSeguroManagedBean.segundopacote.nome}" />
+													</h1>
+													<h2>
+														<h:outputText
+															value="#{pacoteSeguroManagedBean.segundopacote.cobertura}" />
+													</h2>
+												</div>
+												<div class="x_content">
+													<div class="">
+														<div class="pricing_features">
+															<ul class="list-unstyled text-left">
+																<li>
+																	<p style="text-align: center">
+																		<h:outputText
+																			value="#{pacoteSeguroManagedBean.segundopacote.descricao}" />
+																	</p>
+																</li>
+																<li>
+																	<p>
+																		<strong><h:outputText
+																				value="Indenização: #{pacoteSeguroManagedBean.segundopacote.IndenizaçãoReal()}" /></strong>
+																	</p>
+																</li>
+																<li><h:outputText
+																		value="Valor Mensal: #{pacoteSeguroManagedBean.segundopacote.ValorMensalReal()}" />
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="pricing_footer">
+														<h:commandButton styleClass="btn btn-primary btn-block"
+															value="Contratar"
+															action="#{contratoSeguroManagedBean.addPacote2}" >
+															<f:setPropertyActionListener
+															target="#{mensagemManagedBean.mensagem.idContratoSeguro}" value="1" />
+														</h:commandButton>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Plano 3 -->
+										<div class="col-md-4 col-sm-6 col-xs-12">
+											<div class="pricing ui-ribbon-container">
+												<div class="ui-ribbon-wrapper">
+													<div class="ui-ribbon">Sugestão</div>
+												</div>
+												<div class="title">
+													<h1>
+														<h:outputText
+															value="#{pacoteSeguroManagedBean.terceiropacote.nome}" />
+													</h1>
+													<h2>
+														<h:outputText
+															value="#{pacoteSeguroManagedBean.terceiropacote.cobertura}" />
+													</h2>
+												</div>
+												<div class="x_content">
+													<div class="">
+														<div class="pricing_features">
+															<ul class="list-unstyled text-left">
+																<li>
+																	<p style="text-align: center">
+																		<h:outputText
+																			value="#{pacoteSeguroManagedBean.terceiropacote.descricao}" />
+																	</p>
+																</li>
+																<li>
+																	<p>
+																		<strong><h:outputText
+																				value="Indenização: #{pacoteSeguroManagedBean.terceiropacote.IndenizaçãoReal()}" /></strong>
+																	</p>
+																</li>
+																<li><h:outputText
+																		value="Valor Mensal: #{pacoteSeguroManagedBean.terceiropacote.ValorMensalReal()}" />
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="pricing_footer">
+														<h:commandButton styleClass="btn btn-success btn-block"
+															value="Contratar"
+															action="#{contratoSeguroManagedBean.addPacote3}" >
+															<f:setPropertyActionListener
+															target="#{mensagemManagedBean.mensagem.idContratoSeguro}" value="1" />
+														</h:commandButton>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 col-xs-12">
+											<h:commandButton styleClass="btn btn-sm btn-danger"
+												value="Cancelar"
+												action="#{contratoSeguroManagedBean.cancelar}" >
+												<f:setPropertyActionListener
+												target="#{mensagemManagedBean.mensagem.ofereceSeguro}" value="#{false}" />
+											</h:commandButton>
+										</div>
+									</h:form>
+									<!-- INSIRA SEU </form> -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- / PAGINA PRINCIPAL -->
+
+		</div>
+		<!-- FOOTER PRINCIPAL -->
+		<ui:include src="incPainel/painelFooter.xhtml" />
+		<!-- /FOOTER PRINCIPAL -->
+	</div>
+	<!-- IMPORT JS -->
+	<ui:include src="incPainel/painelImportsJs.xhtml" />
+	<!-- /IMPORT JS -->
+</h:body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15102522788910" configfile="/MeuEmpregadoP/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="listaPacoteSeguro.xhtml" x="770" y="1330" id="pf15103364579773" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15103371010556 pf15105180960766" inlinks="pf15103371010557 pf15105180248083" path="/listaPacoteSeguro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="alterarPacoteSeguro.xhtml" x="554" y="946" id="pf15103371010558" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" outlinks="pf15103371010557" inlinks="pf15103371010556" path="/alterarPacoteSeguro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="contrato.xhtml" x="122" y="562" id="pf15105116257110" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf15105116257111" path="/contrato.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="contratoPacoteSeguro.xhtml" x="338" y="562" id="pf15105116257112" referenceLink="//@navigationRule.7/@fromViewId|" outlinks="pf15105180248084 pf15108476632451 pf15127634631020" inlinks="pf15105116257111 pf151084461266814 pf15127709894380" path="/contratoPacoteSeguro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listaContratoSeguro.xhtml" x="554" y="1714" id="pf15105180248085" referenceLink="//@navigationRule.11/@navigationCase.0/@toViewId|" outlinks="pf15105180248083 pf15108701443250" inlinks="pf15105180248084 pf15105180960766 pf15108701443251" path="/listaContratoSeguro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="indexEMPREGADOR.xhtml" x="554" y="1330" id="pf15108324662560" referenceLink="//@navigationRule.15/@navigationCase.0/@toViewId|" outlinks="pf15108324662561 pf15108324662562" inlinks="pf15108324662563 pf15108324662564" path="indexEMPREGADOR.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="showEMPREGADO.xhtml" x="122" y="1320" id="pf15108324662565" referenceLink="//@navigationRule.18/@fromViewId|" outlinks="pf15108324662563 pf15108324662566" inlinks="pf15108324662561" path="showEMPREGADO.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="novaMensagemEMPREGADO.xhtml" x="338" y="1118" id="pf15108324662567" referenceLink="//@navigationRule.18/@navigationCase.0/@toViewId|" outlinks="pf15108324662564" inlinks="pf15108324662562 pf15108324662566" path="novaMensagemEMPREGADO.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="showMsgEMPREGADO.xhtml" x="122" y="1704" id="pf15108324662568" referenceLink="//@navigationRule.16/@fromViewId|" outlinks="pf15108324662569" path="showMsgEMPREGADO.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Inicial.xhtml" x="338" y="1544" id="pf151083246625610" referenceLink="//@navigationRule.17/@navigationCase.0/@toViewId|" inlinks="pf15108324662569 pf151083246625611" path="Inicial.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="MsgEMPREGADOR.xhtml" x="122" y="2312" id="pf151083246625612" referenceLink="//@navigationRule.21/@fromViewId|" outlinks="pf151083246625611 pf15110118501742" path="MsgEMPREGADOR.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="novaMensagemEMPREGADO.xhtml" x="554" y="178" id="pf151084461266815" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf151084461266814" inlinks="pf15108476632451" path="/novaMensagemEMPREGADO.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="RestringirContratoSeguro.xhtml" x="338" y="1928" id="pf15108701443253" referenceLink="//@navigationRule.10/@fromViewId|" outlinks="pf15108701443251" inlinks="pf15108701443250" path="/RestringirContratoSeguro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="telaDemissao.xhtml" x="338" y="2312" id="pf15108701443254" referenceLink="//@navigationRule.20/@fromViewId|" outlinks="pf15110099267440" inlinks="pf15127709894381" path="telaDemissao.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listamensagemEMPREGADOR.xhtml" x="554" y="2514" id="pf15110099267451" referenceLink="//@navigationRule.21/@navigationCase.0/@toViewId|" inlinks="pf15110099267440 pf15110118501742" path="listamensagemEMPREGADOR.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="MeusEmpregados.xhtml" x="554" y="562" id="pf15127634631031" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf15127709894380" inlinks="pf15127634631020" path="/MeusEmpregados.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="MeusEmpregados.xhtml" id="pf15127709894382" referenceLink="//@navigationRule.19/@fromViewId|" outlinks="pf15127709894381" path="MeusEmpregados.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="MsgEMPREGADOR.xhtml" id="pf15128707812920" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15128707812921" path="/MsgEMPREGADOR.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listamensagemEMPREGADOR.xhtml" id="pf15128707812922" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15128707812921" path="/listamensagemEMPREGADOR.xhtml"/>
+  <links id="pf15103371010556" target="pf15103371010558" source="pf15103364579773" outcome="alterarPacoteSeguro" redirect="true"/>
+  <links id="pf15103371010557" target="pf15103364579773" source="pf15103371010558" outcome="listaPacoteSeguro" redirect="true"/>
+  <links id="pf15105116257111" target="pf15105116257112" source="pf15105116257110" outcome="contratoPacoteSeguro" redirect="true"/>
+  <links id="pf15105180248084" target="pf15105180248085" source="pf15105116257112" outcome="listaContratoSeguro" redirect="true"/>
+  <links id="pf15105180248083" target="pf15103364579773" source="pf15105180248085" outcome="listaPacoteSeguro" redirect="true"/>
+  <links id="pf15105180960766" target="pf15105180248085" source="pf15103364579773" outcome="listaContratoSeguro" redirect="true"/>
+  <links id="pf15108324662561" target="pf15108324662565" source="pf15108324662560" outcome="showEMPREGADO" redirect="true"/>
+  <links id="pf15108324662562" target="pf15108324662567" source="pf15108324662560" outcome="novaMensagemEMPREGADO" redirect="true"/>
+  <links id="pf15108324662563" target="pf15108324662560" source="pf15108324662565" outcome="indexEMPREGADOR" redirect="true"/>
+  <links id="pf15108324662564" target="pf15108324662560" source="pf15108324662567" outcome="indexEMPREGADOR" redirect="true"/>
+  <links id="pf15108324662569" target="pf151083246625610" source="pf15108324662568" outcome="Inicial" redirect="true"/>
+  <links id="pf151083246625611" target="pf151083246625610" source="pf151083246625612" outcome="Inicial" redirect="true"/>
+  <links id="pf15108324662566" target="pf15108324662567" source="pf15108324662565" outcome="novaMensagemEMPREGADO" redirect="true"/>
+  <links id="pf151084461266814" target="pf15105116257112" source="pf151084461266815" outcome="contratoPacoteSeguro" redirect="true"/>
+  <links id="pf15108476632451" target="pf151084461266815" source="pf15105116257112" outcome="novaMensagemEMPREGADO" redirect="true"/>
+  <links id="pf15108701443250" target="pf15108701443253" source="pf15105180248085" outcome="RestringirContratoSeguro" redirect="true"/>
+  <links id="pf15108701443251" target="pf15105180248085" source="pf15108701443253" outcome="listaContratoSeguro" redirect="true"/>
+  <links id="pf15110099267440" target="pf15110099267451" source="pf15108701443254" outcome="listamensagemEMPREGADOR" redirect="true"/>
+  <links id="pf15110118501742" target="pf15110099267451" source="pf151083246625612" outcome="listamensagemEMPREGADOR" redirect="true"/>
+  <links id="pf15127634631020" target="pf15127634631031" source="pf15105116257112" outcome="MeusEmpregados" redirect="true"/>
+  <links id="pf15127709894380" target="pf15105116257112" source="pf15127634631031" outcome="contratoPacoteSeguro" redirect="true"/>
+  <links id="pf15127709894381" target="pf15108701443254" source="pf15127709894382" outcome="telaDemissao" redirect="true"/>
+  <links id="pf15128707812921" target="pf15128707812922" source="pf15128707812920" outcome="listamensagemEMPREGADOR" redirect="true"/>
+</pageflow:Pageflow>

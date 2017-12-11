@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<h:body>
+
+	<ui:composition>
+
+		<div class="now_carousel">
+			<div id="main-carousel" class="carousel slide">
+				<!-- Carousel items -->
+				<div class="carousel-inner">
+					<div class="active item">
+						<h:graphicImage name="images/slide1.jpg" />
+						<div class="carousel-caption">
+							<div class="form-wrap">
+								<div class="tabs">
+									<h3 class="signup-tab">
+										<a class="active" href="#signup-tab-content">Sign Up</a>
+									</h3>
+									<h3 class="login-tab">
+										<a href="#login-tab-content">Login</a>
+									</h3>
+								</div>
+								<!--.tabs-->
+
+								<div class="tabs-content">
+									<div id="signup-tab-content" class="active">
+										<h:form>
+											<div class="form-group" >
+												<p:outputLabel for="nome" value="Nome completo" />
+												<p:inputText id="nome"/>
+												<p:outputLabel for="email" value="E-mail" />
+												<p:inputText id="email"/>
+												<p:outputLabel for="senha" value="Senha" />
+												<p:inputText id="senha"/>
+											</div>
+										</h:form>
+										<!--.login-form-->
+										<div class="help-text">
+											<p>By signing up, you agree to our</p>
+											<p>
+												<a href="#">Terms of service</a>
+											</p>
+										</div>
+										<!--.help-text-->
+									</div>
+									<!--.signup-tab-content-->
+
+									<div id="login-tab-content">
+										<form class="login-form" action="" method="post">
+											<input type="text" class="input" id="user_login"
+												autocomplete="off" placeholder="Email or Username" /> <input
+												type="password" class="input" id="user_pass"
+												autocomplete="off" placeholder="Password" /> <input
+												type="checkbox" class="checkbox" id="remember_me" /> <label
+												for="remember_me">Remember me</label> <input type="submit"
+												class="button" value="Login" />
+										</form>
+										<!--.login-form-->
+										<div class="help-text">
+											<p>
+												<a href="#">Forget your password?</a>
+											</p>
+										</div>
+										<!--.help-text-->
+									</div>
+									<!--.login-tab-content-->
+								</div>
+								<!--.tabs-content-->
+							</div>
+							<!--.form-wrap-->
+						</div>
+					</div>
+					<div class="item">
+						<h:graphicImage name="images/slide2.jpg" />
+						<div class="carousel-caption">
+							<!--  -->
+						</div>
+					</div>
+					<div class="item">
+						<h:graphicImage name="images/slide3.jpg" />
+						<div class="carousel-caption">
+							<!--  -->
+						</div>
+					</div>
+					<div class="item">
+						<h:graphicImage name="images/slide4.jpg" />
+						<div class="carousel-caption">
+							<!--  -->
+						</div>
+					</div>
+					<div class="item">
+						<h:graphicImage name="images/slide5.jpg" />
+						<div class="carousel-caption">
+							<!--  -->
+						</div>
+					</div>
+
+				</div>
+				<!-- Carousel nav -->
+				<a class="carousel-control left fa fa-chevron-left"
+					href="#main-carousel" data-slide="prev">&nbsp;</a> <a
+					class="carousel-control right fa fa-chevron-right"
+					href="#main-carousel" data-slide="next">&nbsp;</a>
+			</div>
+			<!-- carousel -->
+		</div>
+		
+		<script type="text/javascript">
+			//<![CDATA[
+			jQuery(document).ready(function($) {
+				tab = $('.tabs h3 a');
+
+				tab.on('click', function(event) {
+					event.preventDefault();
+					tab.removeClass('active');
+					$(this).addClass('active');
+
+					tab_content = $(this).attr('href');
+					$('div[id$="tab-content"]').removeClass('active');
+					$(tab_content).addClass('active');
+				});
+			});
+			//]]>
+		</script>
+	</ui:composition>
+
+</h:body>
+
+</html>
+

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<!--  IMPORTANDO HEAD -->
+	<ui:include src="incPainel/painelHead.xhtml" />
+</h:head>
+<h:body class="nav-md">
+
+	<div class="container body">
+
+		<div class="main_container">
+
+			<!--  IMPORTANDO MENU PRINCIPAL -->
+			<ui:include src="incPainel/painelMenu.xhtml" />
+
+			<!-- IMPORTANDO MENU TOPO -->
+			<ui:include src="incPainel/painelMenuTopo.xhtml" />
+			<!-- PAGINA PRINCIPAL -->
+
+			<div class="right_col" role="main">
+				<div class="">
+					<!-- INSIRA SEU TITULO -->
+
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="x_panel">
+								<div class="x_title">
+									<h2>
+										Demitir
+									</h2>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i
+												class="fa fa-chevron-up"></i></a></li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle"
+											data-toggle="dropdown" role="button" aria-expanded="false"><i
+												class="fa fa-wrench"></i></a>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="#">Configuração</a></li>
+											</ul></li>
+										<li><a class="close-link"><i class="fa fa-close"></i></a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+									<br />
+									<!-- INSIRA SEU <form> -->
+									<f:view>
+										<h:form>
+											
+											<div class="form-group">
+												<h:outputLabel value="Nome:" />
+												<h:inputText id="empregadoNome" disabled="true" styleClass="form-control"
+													value="#{DemissaoBean.empregado.nomeCompleto}"  />
+											</div>
+
+											<div class="form-group">
+												<h:outputLabel value="Cpf:" />
+												<h:inputText id="empregadoCpf"  disabled="true" styleClass="form-control"
+													value="#{DemissaoBean.empregado.cpf}" />
+											</div>
+
+											<div class="form-group">
+												<h:outputLabel
+													value="Data Admissão:" />
+												<h:inputText id="empregadoDataAdmissao"
+													disabled="true" styleClass="form-control"
+													value="#{DemissaoBean.mensagem.data}" />
+											</div>
+											
+											<div class="form-group">
+												<h:outputLabel
+													value="Data Demissao:" />
+												<h:inputText id="empregadoDataDemissao"
+													styleClass="form-control"
+													value="#{DemissaoBean.contratodemissao.datademissao}" />
+											</div>
+
+											<div class="form-group">
+												<h:outputLabel value="Salario:" />
+												<h:inputText id="empregadoSalario" disabled="true" styleClass="form-control"
+													value="#{DemissaoBean.mensagem.salario}" />
+											</div>
+
+											<div class="form-group">
+												<h:outputLabel value="Tipo de Demissão:" />
+												<br />
+												<h:selectOneMenu
+													value="#{DemissaoBean.contratodemissao.tipodemissao}"
+													styleClass="form-control">
+													<f:selectItem itemValue="JustaCausa"
+														itemLabel="Com Justa Causa" />
+													<f:selectItem itemValue="SemJusta"
+														itemLabel="Sem Justa Causa" />
+													<f:selectItem itemValue="PedidoDemissao"
+														itemLabel="Pedido de Demisão" />
+												</h:selectOneMenu>
+											</div>
+
+											<div class="form-group">
+												<h:outputLabel
+													value="Ferias Vencidas: " />
+												<br />
+												<h:selectOneMenu id="feriasVencidas"
+													value="#{DemissaoBean.contratodemissao.feriasvencida}"
+													styleClass="form-control">
+													<f:selectItem itemValue="SIM" itemLabel="SIM" />
+													<f:selectItem itemValue="NAO" itemLabel="NÃO" />
+												</h:selectOneMenu>
+											</div>
+
+											<div class="form-group">
+												<h:outputLabel
+													value="Dias Trabalhados nesse mês: " />
+												<h:inputText id="diasTrabalhados" styleClass="form-control"
+													value="#{DemissaoBean.contratodemissao.diastrabalhados}" />
+											</div>
+
+											<div class="form-group">
+												<h:outputLabel
+													value="Aviso Trabalhado: " />
+												<h:selectOneMenu id="avisoTrabalhado"
+													value="#{DemissaoBean.contratodemissao.avisotrabalhado}"
+													styleClass="form-control">
+													<f:selectItem itemValue="SIM" itemLabel="SIM" />
+													<f:selectItem itemValue="NAO" itemLabel="NÃO" />
+												</h:selectOneMenu>
+											</div>
+											<div id="actions" class="row">
+												<h:commandLink action="#{DemissaoBean.CalculoDemissaoAction}"
+													styleClass="btn btn-sm btn-success" value="Calcular Verbas" 
+													/>
+											</div>
+											<br />
+
+											<h1>DESCRIÇÃO DE VERBAS</h1>
+											
+											<div class="form-group">
+												<h:outputLabel value="Saldo de Salario:" />
+												<h:inputText id="empregadoSaldoSalario" disabled="true" styleClass="form-control"
+													value="#{DemissaoBean.contratodemissao.saldosalario}" />
+											</div>
+											<div class="form-group">
+												<h:outputLabel value="Total" />
+												<h:inputText id="empregadoTotal" disabled="true" styleClass="form-control"
+													value="#{DemissaoBean.contratodemissao.total}" />
+											</div>
+											<div id="actions" class="row">
+												<h:commandLink action="#{DemissaoBean.salvarDemissaoAction}"
+													styleClass="btn btn-sm btn-primary" value="Demitir" 
+													/>
+											</div>
+										</h:form>
+									</f:view>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- / PAGINA PRINCIPAL -->
+
+		</div>
+
+
+
+		<!-- FOOTER PRINCIPAL -->
+		<ui:include src="incPainel/painelFooter.xhtml" />
+		<!-- /FOOTER PRINCIPAL -->
+	</div>
+	<!-- IMPORT JS -->
+	<ui:include src="incPainel/painelImportsJs.xhtml" />
+	<!-- /IMPORT JS -->
+</h:body>
+</html>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+	<f:metadata> 
+		<f:event type="preRenderView" listener="#{listarempregadosManagedBean.atualizar}"/> 
+	</f:metadata>
+<h:head>
+	<!--  IMPORTANDO HEAD -->
+	<ui:include src="incPainel/painelHead.xhtml" />
+</h:head>
+<h:body class="nav-md">
+
+	<div class="container body">
+
+		<div class="main_container">
+
+			<!--  IMPORTANDO MENU PRINCIPAL -->
+			<ui:include src="incPainel/painelMenu.xhtml" />
+
+			<!-- IMPORTANDO MENU TOPO -->
+			<ui:include src="incPainel/painelMenuTopo.xhtml" />
+			<!-- PAGINA PRINCIPAL -->
+
+			<div class="right_col" role="main">
+				<div class="">
+
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="x_panel">
+								<div class="x_title">
+									<h2 style="text-align: center">Meus Empregados</h2>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i
+												class="fa fa-chevron-up"></i></a></li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle"
+											data-toggle="dropdown" role="button" aria-expanded="false"><i
+												class="fa fa-wrench"></i></a>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="#">Configuração</a></li>
+											</ul></li>
+										<li><a class="close-link"><i class="fa fa-close"></i></a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+									<br />
+									<!-- INSIRA SEU <form> -->
+									<div class="container">
+
+									<hr />
+									<f:view>
+										<h:form>
+											<h:dataTable styleClass="table table-striped" var="c"
+												value="#{listarempregadosManagedBean.listaEmpregados}">
+												<h:column>
+													<f:facet name="header">
+														<h:outputLabel value="Nome" />
+													</f:facet>
+													<h:outputText value="#{c.nomeCompleto}" />
+												</h:column>
+												<h:column>
+													<f:facet name="header">
+														<h:outputLabel value="Email" />
+													</f:facet>
+													<h:outputText value="#{c.email}" />
+												</h:column>
+
+												<h:column>
+													<f:facet name="header">
+														<h:outputLabel value="Cidade" />
+													</f:facet>
+													<h:outputText value="#{c.cidade}" />
+												</h:column>
+
+
+												<h:column>
+													<f:facet name="header">
+														<h:outputLabel value="Descrição" />
+													</f:facet>
+													<h:outputText value="#{c.descricao}" />
+												</h:column>
+												<h:column>
+													<f:facet name="header">
+														<h:outputLabel value="Seguro de Vida" />
+													</f:facet>
+													<h:commandLink rendered="#{c.contratoseguro == null}" styleClass="btn btn-sm btn-success" value="Adicionar Seguro de Vida" action="contratoPacoteSeguro?faces-redirect=true">
+														<f:setPropertyActionListener target="#{contratoSeguroManagedBean.empregado}" value="#{c}" />
+													</h:commandLink>
+													<h:outputText rendered="#{c.contratoseguro != null}" value="Já possui Seguro de Vida" />
+												</h:column>
+												<h:column>
+													<f:facet name="header">
+														<h:outputLabel value="Demitir" />
+													</f:facet>
+													<h:commandLink value="Demitir" styleClass="btn btn-danger" action="#{DemissaoBean.ObterDadosAction}">
+														<f:setPropertyActionListener target="#{DemissaoBean.empregado}" value="#{c}" />
+													</h:commandLink>
+												</h:column>
+											</h:dataTable>
+										</h:form>
+									</f:view> 
+									</div>
+									<!-- INSIRA SEU </form> -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- / PAGINA PRINCIPAL -->
+
+		</div>
+		<!-- FOOTER PRINCIPAL -->
+		<ui:include src="incPainel/painelFooter.xhtml" />
+		<!-- /FOOTER PRINCIPAL -->
+	</div>
+	<!-- IMPORT JS -->
+	<ui:include src="incPainel/painelImportsJs.xhtml" />
+	<!-- /IMPORT JS -->
+</h:body>
+</html>

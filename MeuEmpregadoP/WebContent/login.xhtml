@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<f:metadata> 
+		<f:event type="preRenderView" listener="#{mensagemManagedBean.atualizar}"/>
+	</f:metadata>
+<h:head>
+
+	<!--  IMPORTANDO HEAD -->
+	<ui:include src="incPainel/painelHead.xhtml" />
+	
+</h:head>
+<h:body id="particles-js" class="login">
+	<div>
+
+		<p:commandLink class="hiddenanchor" id="signup" />
+		<p:commandLink class="hiddenanchor" id="signin" />
+
+		<div class="login_wrapper">
+			<div class="animate form login_form">
+			
+			
+				<section class="login_content"> <h:form id="frm">
+					<h1>Entrar</h1>
+					
+					<p:growl id="messages1" closable="true" autoUpdate="true" sticky="true"/>
+				
+					
+					<h:panelGrid columns="1">
+
+						<p:outputPanel id="customPanel" style="margin-bottom:16px; margin-left:27px">
+
+
+							<p:selectOneRadio id="tipoUsuario" styleClass="ui-icon-bullet"
+							required="true" requiredMessage="Selecionar tipo Empregado ou Empregador"
+							value="#{loginManagedBean.tipoUsuario}">
+								<f:selectItem itemLabel="Sou Empregado" itemValue="EMPREGADO" />
+								<f:selectItem itemLabel="Sou Empregador" itemValue="EMPREGADOR" />
+							</p:selectOneRadio>
+
+						</p:outputPanel>
+
+
+						<p:inputText size="100" id="email" placeholder="E-MAIL" 
+						value="#{loginManagedBean.email}"
+						required="true"
+							requiredMessage="Campo e-mail não informado"
+							validatorMessage="E-mail incorreto"
+							
+							> 
+							
+							<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+							<p:ajax process="@this" update="@this" />
+							</p:inputText>
+
+
+						<p:password size="100" id="senha" placeholder="SENHA"
+						value="#{loginManagedBean.senha}"
+						required="true"
+							requiredMessage="Campo senha não informado" />
+
+						<h:panelGrid columns="3" width="100%">   
+							<p:commandLink id="btnEntrar" class="btn buttonLogin"
+							action="#{loginManagedBean.logar}"
+							process="frm" update="frm"
+							 value="Entrar" />
+							
+							<!-- Connectar com facebook -->
+
+
+						
+							<p:commandLink
+							style="border-radius: 40px !important;"
+							 action="#{autenticarLoginUsuarioMB.conectar()}"
+								process="@this tipoUsuario" update="@this tipoUsuario"
+								partialSubmit="@this tipoUsuario"
+								styleClass="btn btn-primary" value="Entrar com Facebook" />
+					
+
+
+						<!-- /Connectar com facebook -->
+							
+						</h:panelGrid>
+
+						
+
+					</h:panelGrid>
+
+
+
+					<div class="clearfix"></div>
+
+					<div class="separator">
+						<p class="change_link">
+							Novo no site ? <a href="#signup" class="to_register">
+								Cadastre-se </a>
+						</p>
+
+						<div class="clearfix"></div>
+						<br />
+
+						<div>
+							<h1>
+								<i class="fa fa-ravelry"></i> Meu Empregado
+							</h1>
+							<p>©2017 Todos os direitos reservados.</p>
+						</div>
+					</div>
+				</h:form> </section>
+			</div>
+
+		</div>
+
+	</div>
+</h:body>
+<!--  IMPORTANDO JS -->
+<ui:include src="incPainel/painelImportsJs.xhtml" />
+<h:outputScript name="util/particles.js/particles.js" />
+<h:outputScript name="util/particles.js/app.js" />
+<h:outputScript name="util/facebook/facebook.sdk.js" />
+
+
+
+</html>

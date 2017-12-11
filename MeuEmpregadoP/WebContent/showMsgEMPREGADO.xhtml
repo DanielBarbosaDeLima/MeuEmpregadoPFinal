@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<!--  IMPORTANDO HEAD -->
+	<ui:include src="incPainel/painelHead.xhtml" />
+</h:head>
+<h:body class="nav-md">
+
+	<div class="container body">
+
+		<div class="main_container">
+
+			<!--  IMPORTANDO MENU PRINCIPAL -->
+			<ui:include src="incPainel/painelMenu.xhtml" />
+
+			<!-- IMPORTANDO MENU TOPO -->
+			<ui:include src="incPainel/painelMenuTopo.xhtml" />
+			<!-- PAGINA PRINCIPAL -->
+
+			<div class="right_col" role="main">
+				<div class="">
+
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="x_panel">
+								<div class="x_title">
+									<h2>Detalhes</h2>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i
+												class="fa fa-chevron-up"></i></a></li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle"
+											data-toggle="dropdown" role="button" aria-expanded="false"><i
+												class="fa fa-wrench"></i></a>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="#">Configuração</a></li>
+											</ul></li>
+										<li><a class="close-link"><i class="fa fa-close"></i></a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+									<br />
+									<!-- INSIRA SEU <form> -->
+									<div class="container">
+
+										<f:view>
+											<h:form>
+
+												<div class="form-group">
+													<h:outputLabel value="Nome Empresa:" />
+													<h:inputText disabled="true" styleClass="form-control"
+														value="#{mensagemManagedBean.mensagem.nomeempresa}" />
+												</div>
+
+												<div class="form-group">
+													<h:outputLabel value="Email:" />
+													<h:inputText styleClass="form-control"
+														value="#{mensagemManagedBean.mensagem.email}"
+														disabled="true" />
+												</div>
+
+												<div class="form-group">
+													<h:outputLabel value="Endereço:" />
+													<h:inputText styleClass="form-control"
+														value="#{mensagemManagedBean.mensagem.endereco}"
+														disabled="true" />
+												</div>
+
+												<div class="form-group">
+													<h:outputLabel value="Vaga:" />
+													<h:inputText styleClass="form-control"
+														value="#{mensagemManagedBean.mensagem.vaga}"
+														disabled="true" />
+												</div>
+
+												<div class="form-group">
+													<h:outputLabel value="Salario:" />
+													<h:inputText styleClass="form-control"
+														value="#{mensagemManagedBean.mensagem.salario}"
+														disabled="true" />
+												</div>
+
+												<div class="form-group">
+													<h:outputLabel value="Beneficios:" />
+													<h:inputText styleClass="form-control"
+														value="#{mensagemManagedBean.mensagem.beneficios}"
+														disabled="true" />
+												</div>
+
+												<div class="form-group">
+													<h:outputLabel value="Data de inicio do trabalho:" />
+													<h:inputText styleClass="form-control"
+														value="#{mensagemManagedBean.mensagem.data}"
+														disabled="true" />
+												</div>
+												
+												<div class="form-group">
+
+													<h:outputLabel value="Resposta do candidato:" />
+													<h:selectOneRadio
+														value="#{mensagemManagedBean.mensagem.resposta.idResposta}">
+														<f:selectItem itemValue="1" itemLabel="Sim" />
+														<f:selectItem itemValue="2" itemLabel="Não" />
+													</h:selectOneRadio>
+												</div>
+
+												<div id="actions" class="row">
+													<div class="col-md-12">
+
+														<h:commandLink styleClass="btn btn-primary"
+															value="Salvar Resposta"
+															action="#{mensagemManagedBean.updateMensagemAction}" />
+
+														<h:commandLink value="Voltar" styleClass="btn btn-primary"
+															action="listamensagemEMPREGADO?faces-redirect=true" />
+													</div>
+												</div>
+
+											</h:form>
+										</f:view>
+									</div>
+									<!-- INSIRA SEU </form> -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- / PAGINA PRINCIPAL -->
+
+		</div>
+		<!-- FOOTER PRINCIPAL -->
+		<ui:include src="incPainel/painelFooter.xhtml" />
+		<!-- /FOOTER PRINCIPAL -->
+	</div>
+	<!-- IMPORT JS -->
+	<ui:include src="incPainel/painelImportsJs.xhtml" />
+	<!-- /IMPORT JS -->
+</h:body>
+</html>
